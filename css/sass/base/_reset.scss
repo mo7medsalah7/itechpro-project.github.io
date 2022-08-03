@@ -1,0 +1,11 @@
+section {
+	text-align: center
+}
+
+
+button.navbar-toggler {
+	outline: none;
+	&:focus {
+		outline: none;
+	}
+}

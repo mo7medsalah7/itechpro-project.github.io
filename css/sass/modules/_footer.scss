@@ -1,0 +1,37 @@
+footer {
+	.social {
+		li {
+			display: inline-block;
+			a {
+				color: $majorColor;
+				@include single-transition(all,0.5, ease-in-out);
+				&:hover {
+					color: $majorColor;
+					@include box-shadow(0px, 5px, 10px, 1, rgba(0,0,0,0.2));
+				}
+				i {
+					font-size: $medSize;
+					margin-right: $medSize;
+				}
+			}
+		}
+	}
+
+	button {
+		@extend %button_1;
+		padding: 22px 78px;
+		@media #{$minSmall} {
+			padding:20px 25px;
+			width: 90%;
+		}
+	}
+	textarea {
+		resize: none;
+	}
+	.copyrights {
+		margin-top: $regularSize;
+		padding: $regularSize;
+		background: #363d4e;
+		color: #fff;
+	}
+}

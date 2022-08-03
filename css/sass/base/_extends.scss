@@ -1,0 +1,39 @@
+%button_1 {
+	padding: 22px 20px;
+	cursor: pointer;
+	background-color: $majorColor;
+	color: #fff;
+	border: none;
+	font-size: $regularSize;
+	font-family: $mainFont;
+	@include single-transition(all, 0.3s, ease-in-out);
+	@media #{$maxMobile} {
+		padding: 18px 16px;
+	}
+	&:hover {
+		color: $majorColor;
+		background-color: #fff;
+		font-weight: bold;
+		// @include box-shadow(0, 1, 5, 1, rgba(2, 3, 3, 0.1));
+		@include box-shadow(1px, 1px, 25px, 0, rgba(2, 3, 3, 0.25));
+	}
+	&:focus {
+		outline: none;
+	}
+}
+
+%marginAuto {
+  @include margin-auto();
+}
+
+%clearfix {
+  @include clearfix();
+}
+
+%inlineBlock {
+  @include inline-block();
+}
+
+%hideText {
+  @include hide-text();
+}

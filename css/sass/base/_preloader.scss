@@ -1,0 +1,116 @@
+
+/*********************************************************************************************
+CSS Structure
+
+1.  Preloader
+2.  Nav
+3.  Main Sections
+4.  Header
+5.  Features
+6.  Download
+7.  Pricing
+8. Gallery
+9. Our Team
+10. Subscribe
+11. FAQs
+12. Contact
+13. Footer
+
+*********************************************************************************************/
+.preloader {
+    z-index: 6000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    .content {
+        height: 102px;
+        width: 100px;
+        margin: auto;
+        border-radius: 50%;
+        -webkit-animation: spin 5s infinite linear;
+        animation: spin 5s infinite linear;
+        .circle {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            .inner {
+                height: 100%;
+                width: 100%;
+                border: 5px solid rgba(100, 149, 237, 0.7);
+                border-right: none;
+                border-top: none;
+                border-radius: 100%;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+                -webkit-box-shadow: inset 0px 0px 10px rgba(100, 149, 237, 0.15);
+                box-shadow: inset 0px 0px 10px rgba(100, 149, 237, 0.15)
+              }
+          }
+      }
+  }
+  
+  @-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+  }
+  
+  @keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+  }
+  
+  .circle:nth-of-type(0) {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+        transform: rotate(0deg)
+  }
+  
+  .circle:nth-of-type(0) .inner {
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear
+  }
+  
+  .circle:nth-of-type(1) {
+    -webkit-transform: rotate(70deg);
+    -ms-transform: rotate(70deg);
+        transform: rotate(70deg)
+  }
+  
+  .circle:nth-of-type(1) .inner {
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear
+  }
+  
+  .circle:nth-of-type(2) {
+    -webkit-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+        transform: rotate(140deg)
+  }
+  
+  .circle:nth-of-type(2) .inner {
+    -webkit-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear
+  }
+  

@@ -1,0 +1,144 @@
+// File Name: _header.scss
+// Description: global header styles
+// Used by: main.scss
+// Dependencies:
+// ------------------------------------------------------------
+
+.scrolledNav {
+    	padding: 12px 0;
+		background-color: #fcfcfc !important;
+	    .navbar-nav{
+	    	li {
+	    		a {
+	    			color: #222 !important;
+	    		}
+	    	}
+	    }
+	    .navbar-toggler {
+	    	color: $majorColor !important;
+	    	border: 1px solid $majorColor !important;
+	    }
+	}
+main {
+	.header {
+		nav {
+			padding: 1.2rem 1rem;
+			@include single-transition(all, 0.5s, ease-in-out);
+			@include box-shadow(0px, 10px, 20px, 0, rgba(0,0,0,0.2));
+		    .navbar-nav .nav-link {
+		    	font-size: $regularSize;
+			    font-weight: 500;
+			    padding: 0.65rem 1.5rem;
+			    margin-left: 1px;
+			    color: #fff;
+		    }
+		    .navbar-brand {
+		    	img {
+			    	width: 130px;
+			    	height: 30px;
+		    	}
+		    }
+		    .navbar-nav {
+				@media #{$maxMobile}  {
+					margin-top: $regularSize;
+					margin-left: $regularSize;
+				}
+		    	.dropdown {
+		    		.dropdown-menu {
+		    			.dropdown-item {
+			    			padding-top: 0.5rem;
+	    					padding-bottom: 0.5rem;
+	    					font-size: $regularSize;
+		    			}
+		    		}
+				}
+				.nav-link {
+					@media #{$maxMobile} {
+						color: #363d4e;
+					}
+				}
+
+		    }
+		    .navbar-toggler {
+		    	color: #fff;
+			    border-color: #fff;
+			    padding: 0.25rem 0.5rem;
+			    font-size: 1.05rem;
+			    i {
+			    	font-size: 1.66rem;
+			    }
+			}
+   		}
+	}
+	.main-header {
+	    padding-top: 150px;
+	    font-family: $mainFont;
+	    @include background-cover();
+	    @include linear-gradient(45deg, #88d3ce, #6e45e2);
+	    .header-content {
+	    	background: #fff;
+    		padding: 140px 40px;
+    		@media #{$maxMobile} {
+    			text-align: center;
+    		}
+    		a.video {
+    			@media #{$maxMobile} {
+    				margin-top: $medSize;
+				}
+				@media #{$minMedium} {
+					margin-left: $medSize;
+				}
+				@media #{$minSmall} {
+					margin: 2.05rem auto;
+				}
+				i.fa-play {
+					color: $majorColor;
+				    border: 2px solid $majorColor;
+				    background: transparent;
+				    border-radius: 50%;
+				    cursor: pointer;
+				    width: 42px;
+				    height: 42px;
+				    font-size: 24px;
+				    line-height: 40px;
+				    text-align: center;
+				    &:before {
+				    	padding: 8px 12px;
+				    }
+				}
+    		}
+	    }
+	    .title {
+			@media #{$maxMobile} {
+				font-weight: 500;
+				font-size: $medSize;
+				text-align: center;
+			}
+			text-align: left;
+	    	font-weight: 700;
+	    	font-size: $largeSize;
+	    	margin-bottom: $medSize;
+	    }
+	    p {
+	    	margin-bottom: $largeSize;
+	    	font-size: 1.25rem;
+			max-width: 80%;
+			text-align: left;
+	    	@media #{$maxMobile} {
+	    		max-width: 100%;
+				text-align: center;
+				font-size: $regularSize;
+	    	}
+	    }
+	    .button_1 {
+	    	@extend %button_1;
+	    	@media #{$maxMobile} {
+	    		margin-bottom: $regularSize;
+	    	}
+	    }
+
+	    .media-content {
+	    	text-align: center;
+	    }
+	}	
+}
